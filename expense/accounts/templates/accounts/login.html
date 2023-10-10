@@ -1,0 +1,16 @@
+{% extends 'accounts/accounts_base.html' %}
+{% load bootstrap5 %}
+
+{% block titleBlock %}
+  Expense | Log In
+{% endblock titleBlock %}
+
+{% block content %}
+    <h1>Log In</h1>
+    <form method="POST">
+    {% csrf_token %}
+    {% bootstrap_form form %}
+    <input type="submit" class="btn btn-primary" value="Log In" />
+    <a href="{% url "accounts:signup" %}" class="btn btn-secondary float-end">Sign up</a>
+    </form>
+{% endblock %}

@@ -1,0 +1,16 @@
+{% extends 'tracker/base.html' %}
+{% load bootstrap5 %}
+{% load static %}
+
+{% block titleBlock %}
+Profile
+{% endblock titleBlock %}
+
+{% block content %}
+<img src="{% static 'accounts/wotamark.png' %}" alt="DoTech J Logo" height="63" width="50" />
+<form method="post">
+    {% csrf_token %}
+    {% bootstrap_form form %}
+    <input type="submit" class="btn" value="Next" />
+</form>
+{% endblock content %}
